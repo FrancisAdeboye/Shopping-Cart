@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <Title>Shopping Cart</Title>
+  </head>
+  <body>
+      <button onclick="addtoCart('Apple')" >Apple</button>
+      <button onclick="addtoCart('Tomato')" >Tomato</button>
+      <button onclick="addtoCart('Eggs')">Eggs</button>
+      <button onclick="addtoCart('Orange')">Orange</button>
+      <button onclick="addtoCart('Chicken')">Chicken</button>
+      <button onclick="addtoCart('Snacks')">Snacks</button>
+      <button onclick="addtoCart('Drinks')">Drinks</button>
+      <button style="background-color: black; color: white;" onclick="clearALL()">CLEAR</button>
+      <div id="cart"></div>
+    <script>
+      const cart = document.getElementById('cart');
+      function addtoCart(food) {
+        const cartItem = document.createElement('div')
+        cartItem.innerText = food;
+        cart.appendChild(cartItem);
+      }
+      function clearALL(){
+        cart.innerHTML = '';
+      }
+    </script>
+  </body>
+</html>
